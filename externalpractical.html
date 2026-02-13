@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Image Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 400px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Responsive Image Gallery</h1>
+</header>
+
+<div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature 1">
+    <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3" alt="Nature 2">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Nature 3">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Nature 4">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Nature 5">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Nature 6">
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Nature 7">
+    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Nature 8">
+
+</div>
+
+<footer>
+    <p>2026 Responsive Gallery</p>
+</footer>
+
+</body>
+</html>
